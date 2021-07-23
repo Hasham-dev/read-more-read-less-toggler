@@ -24,6 +24,7 @@ export const ReadMoreWrapper = styled.span`
   margin: 10px;
   display: flex;
   align-items: center;
+  color: ${(props) => (props.buttonColor && props.buttonColor)};
 `
 
 export const Caret = styled(BsArrowUpShort)`

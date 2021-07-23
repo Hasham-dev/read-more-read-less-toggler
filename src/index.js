@@ -2,7 +2,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Paragraph, ReadMoreWrapper, Caret } from './styled/index'
 import { BREAKPOINTS } from './styled/mediaQueries'
 
-export const ReadMoreToggler = ({ children, mobileBreakLines, desktopBreakLines }) => {
+export const ReadMoreToggler = ({
+  children,
+  mobileBreakLines,
+  desktopBreakLines,
+  buttonColor
+}) => {
   const [readMore, setReadMore] = useState(false)
   const [isParagraphExceed, setIsParagraphExceed] = useState(false)
   const paragraphRef = useRef()
@@ -48,7 +53,7 @@ export const ReadMoreToggler = ({ children, mobileBreakLines, desktopBreakLines 
 
   const ReadMoreTextToggler = () =>
     isParagraphExceed && (
-      <ReadMoreWrapper onClick={toggleHandler}>
+      <ReadMoreWrapper onClick={toggleHandler} buttonColor={buttonColor}>
         <Caret collapse={isOverflow} />
         {readMore ? 'READ LESS' : 'READ MORE'}
       </ReadMoreWrapper>
