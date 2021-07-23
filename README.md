@@ -13,16 +13,18 @@ npm install --save read-more-read-less-toggler
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { ReadMoreToggler } from 'read-more-read-less-toggler'
 
-import MyComponent from 'read-more-read-less-toggler'
-import 'read-more-read-less-toggler/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <ReadMoreToggler>
+      Some demo text...
+    </ReadMoreToggler>
+  )
 }
+
+export default App
 ```
 
 ## License
