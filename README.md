@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/read-more-read-less-toggler.svg)](https://www.npmjs.com/package/read-more-read-less-toggler) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## [Demo](https://hasham-dev.github.io/read-more-read-less-toggler/)
+
 ## Install
 
 ```bash
