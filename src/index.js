@@ -6,6 +6,8 @@ export const ReadMoreToggler = ({
   children,
   mobileBreakLines,
   desktopBreakLines,
+  topGradient,
+  bottomGradient,
   buttonColor
 }) => {
   const [readMore, setReadMore] = useState(false)
@@ -14,6 +16,7 @@ export const ReadMoreToggler = ({
   const isOverflow = isParagraphExceed && !readMore
   const [paragraphHeight, setParagraphHeight] = useState()
   const [childrenScrollHeight, setChildrenScrollHeight] = useState()
+  const gradientColor = (topGradient && bottomGradient) ? `linear-gradient(to top,${topGradient},${bottomGradient})` : 'linear-gradient(to top,#FFFFFF,#25232363)'
 
   const toggleHandler = () => {
     setReadMore(!readMore)
@@ -64,6 +67,7 @@ export const ReadMoreToggler = ({
       <Paragraph
         collapse={isOverflow}
         paragraphHeight={readMore ? `${childrenScrollHeight}px` : `${paragraphHeight}px`}
+        gradientColor={isOverflow ? gradientColor : false}
         ref={paragraphRef}
       >
         {children}

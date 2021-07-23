@@ -5,7 +5,7 @@ export const Paragraph = styled.p`
   max-height: ${(props) => props.paragraphHeight};
   overflow: hidden;
   background-image: ${(props) =>
-    props.collapse && 'linear-gradient(to top,#FFFFFF,#25232363);'};
+    props.gradientColor && props.gradientColor};
   background-clip: ${(props) => props.collapse && 'text'};
   -webkit-background-clip: ${(props) => props.collapse && 'text'};
   -webkit-text-fill-color: ${(props) => props.collapse && 'transparent'};
