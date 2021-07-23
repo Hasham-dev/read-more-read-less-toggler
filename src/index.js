@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Paragraph, ReadMoreWrapper, Caret } from './styled/index'
 import { BREAKPOINTS } from './styled/mediaQueries'
 
-export const ReadMoreToggler = ({ children }) => {
+export const ReadMoreToggler = ({ children, mobileBreakLines, desktopBreakLines }) => {
   const [readMore, setReadMore] = useState(false)
   const [isParagraphExceed, setIsParagraphExceed] = useState(false)
   const paragraphRef = useRef()
@@ -24,7 +24,10 @@ export const ReadMoreToggler = ({ children }) => {
 
     // isoverflow calculations
     const isMobileBreakpoint = window.innerWidth < BREAKPOINTS.mobile
-    const calculatedParagraphHeight = (isMobileBreakpoint ? 5 : 3) * lineHeight
+    const definedMobileBreakLines = mobileBreakLines ?? 5
+    const definedDesktopBreakLines = desktopBreakLines ?? 3
+    const calculatedAcceptableLines = (isMobileBreakpoint ? definedMobileBreakLines : definedDesktopBreakLines)
+    const calculatedParagraphHeight = calculatedAcceptableLines * lineHeight
     setParagraphHeight(calculatedParagraphHeight)
     const scrollHeight = paragraphRef.current?.scrollHeight
     setChildrenScrollHeight(scrollHeight)
