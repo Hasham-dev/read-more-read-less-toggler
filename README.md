@@ -27,6 +27,19 @@ const App = () => {
 export default App
 ```
 
+## The Options:
+
+- mobileBreakLines: ```default 5 lines```
+- desktopBreakLines: ```default 3 lines```
+- topGradient: ```default #FFFFFF```
+- bottomGradient: ```default #25232363```
+- buttonColor: ```default parent defined color```
+
+
+## Contributing
+
+Pull requests are always welcome, but not all suggested features will get merged. Feel free to contact me if you have an idea for a feature.
+
 ## License
 
 MIT © [Hasham-dev](https://github.com/Hasham-dev)
