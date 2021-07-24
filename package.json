@@ -1,10 +1,17 @@
 {
-  "name": "read-more-read-less-togglerr",
-  "version": "1.0.2",
+  "name": "read-more-read-less-toggler",
+  "version": "1.0.1",
   "description": "Made with create-react-library",
   "author": "Hasham-dev",
   "license": "MIT",
   "repository": "Hasham-dev/read-more-read-less-toggler",
+  "keywords": [
+    "read-more",
+    "turncate",
+    "collapse",
+    "read less",
+    "read more toggle"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -24,7 +31,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
