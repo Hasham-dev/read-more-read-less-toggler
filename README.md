@@ -38,11 +38,11 @@ export default App
 
 |     Props        |  type   | Default Value |                       Defination                       |
 | :-----------:    | :-----: | :-----------: | :----------------------------------------------------: |
-| mobileBreakLines | number  |     5         |    number of line from which you want to turncate text for mobile view     |
-|desktopBreakLines | number  |     3         | number of line from which you want to turncate text for web view |
-|   topGradient    | string  |   #FFFFFF     |     top gradient color on the turncate collapse view      |
-| bottomGradient   | string  |   #25232363   | bottom gradient color on the turncate collapse view  |
-|   buttonColor    | string  |parent defined|   Read More / Read Less button & caret icon color    |
+| mobileBreakLines | number  |  5  |Number of line from which you want to turncate text for mobile view     |
+|desktopBreakLines | number  |  3  |Number of line from which you want to turncate text for web view |
+|   topGradient    | string  |#FFFFFF|Top gradient color on the turncate collapse view      |
+| bottomGradient   | string  |#25232363|Bottom gradient color on the turncate collapse view  |
+|   buttonColor    | string  |Parent Defined|Read More / Read Less button & caret icon color    |
 
 
 ## Contributing
