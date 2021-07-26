@@ -2,7 +2,7 @@
 
 It's truncate children text & visible Read More button to expand the collapse on specific pre-defined line overflow with collapse gradient effect.
 
-> Made with create-react-library
+> Turncate Text with Read More Button
 
 [![NPM](https://img.shields.io/npm/v/read-more-read-less-toggler.svg)](https://www.npmjs.com/package/read-more-read-less-toggler) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
