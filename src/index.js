@@ -14,8 +14,8 @@ export const ReadMoreToggler = ({
   const [isParagraphExceed, setIsParagraphExceed] = useState(false)
   const paragraphRef = useRef()
   const isOverflow = isParagraphExceed && !readMore
-  const [paragraphHeight, setParagraphHeight] = useState()
-  const [childrenScrollHeight, setChildrenScrollHeight] = useState()
+  const [paragraphCollapseHeight, setParagraphCollapseHeight] = useState()
+  const [paragraphScrollHeight, setParagraphScrollHeight] = useState()
   const gradientColor = (topGradient && bottomGradient) ? `linear-gradient(to top,${topGradient},${bottomGradient})` : 'linear-gradient(to top,#FFFFFF,#25232363)'
 
   const toggleHandler = () => {
@@ -36,9 +36,9 @@ export const ReadMoreToggler = ({
     const definedDesktopBreakLines = desktopBreakLines ?? 3
     const calculatedAcceptableLines = (isMobileBreakpoint ? definedMobileBreakLines : definedDesktopBreakLines)
     const calculatedParagraphHeight = calculatedAcceptableLines * lineHeight
-    setParagraphHeight(calculatedParagraphHeight)
+    setParagraphCollapseHeight(calculatedParagraphHeight)
     const scrollHeight = paragraphRef.current?.scrollHeight
-    setChildrenScrollHeight(scrollHeight)
+    setParagraphScrollHeight(scrollHeight)
     const isParagraphHeightGreater = calculatedParagraphHeight < scrollHeight
     setIsParagraphExceed(isParagraphHeightGreater)
   }
@@ -54,7 +54,7 @@ export const ReadMoreToggler = ({
     // eslint-disable-next-line
   }, []);
 
-  const ReadMoreTextToggler = () =>
+  const ReadMoreButton = () =>
     isParagraphExceed && (
       <ReadMoreWrapper onClick={toggleHandler} buttonColor={buttonColor}>
         <Caret collapse={isOverflow} />
@@ -66,13 +66,13 @@ export const ReadMoreToggler = ({
     <div>
       <Paragraph
         collapse={isOverflow}
-        paragraphHeight={readMore ? `${childrenScrollHeight}px` : `${paragraphHeight}px`}
+        paragraphHeight={readMore ? `${paragraphScrollHeight}px` : `${paragraphCollapseHeight}px`}
         gradientColor={isOverflow ? gradientColor : false}
         ref={paragraphRef}
       >
         {children}
       </Paragraph>
-      <ReadMoreTextToggler />
+      <ReadMoreButton />
     </div>
   )
 }
