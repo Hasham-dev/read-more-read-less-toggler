@@ -1,6 +1,6 @@
 {
   "name": "read-more-read-less-toggler",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Made with create-react-library",
   "author": "Hasham-dev",
   "license": "MIT",
@@ -10,7 +10,12 @@
     "turncate",
     "collapse",
     "read less",
-    "read more toggle"
+    "read more toggle",
+    "react",
+    "readmore",
+    "mutlilines",
+    "clamp",
+    "lines-ellipsis"
   ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",

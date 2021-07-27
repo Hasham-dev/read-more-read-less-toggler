@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Paragraph, ReadMoreWrapper, Caret } from './styled/index'
-import { BREAKPOINTS } from './styled/mediaQueries'
+import { BREAKPOINTS } from './styled/mediaBreakPoints'
 
 export const ReadMoreToggler = ({
   children,
