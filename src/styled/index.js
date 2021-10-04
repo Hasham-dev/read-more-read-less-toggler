@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { BsArrowUpShort } from 'react-icons/all'
+import DownArrow from '../resources/down-arrow.svg'
 
 export const Paragraph = styled.p`
   max-height: ${(props) => props.paragraphHeight};
@@ -27,7 +27,7 @@ export const ReadMoreWrapper = styled.span`
   color: ${(props) => (props.buttonColor && props.buttonColor)};
 `
 
-export const Caret = styled(BsArrowUpShort)`
+export const Caret = styled(DownArrow)`
   width: 36px;
   height: 36px;
   transform: ${(props) => props.collapse && 'rotate(-180deg)'};
