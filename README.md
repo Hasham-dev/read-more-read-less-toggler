@@ -1,6 +1,6 @@
 # read-more-read-less-toggler
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hasham-dev_read-more-read-less-toggler&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hasham-dev_read-more-read-less-toggler)
+Sonar Status: [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hasham-dev_read-more-read-less-toggler&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hasham-dev_read-more-read-less-toggler)
 
 It's truncate children text & visible Read More button to expand the collapse on specific pre-defined line overflow with collapse gradient effect.
 
