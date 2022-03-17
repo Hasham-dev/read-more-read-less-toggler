@@ -8,7 +8,9 @@ export const ReadMoreToggler = ({
   desktopBreakLines,
   topGradient,
   bottomGradient,
-  buttonColor
+  buttonColor,
+  readMoreText="Read more",
+  readLessText="Read less"
 }) => {
   const [readMore, setReadMore] = useState(false)
   const [isParagraphExceed, setIsParagraphExceed] = useState(false)
@@ -58,7 +60,7 @@ export const ReadMoreToggler = ({
     isParagraphExceed && (
       <ReadMoreWrapper onClick={toggleHandler} buttonColor={buttonColor}>
         <Caret collapse={isOverflow} />
-        {readMore ? 'READ LESS' : 'READ MORE'}
+        {readMore ? readLessText : readMoreText}
       </ReadMoreWrapper>
     )
 
