@@ -63,7 +63,7 @@ export const ReadMoreToggler = ({
     )
 
   return (
-    <div>
+    <div className="read-more-wrapper">
       <Paragraph
         collapse={isOverflow}
         paragraphHeight={readMore ? `${paragraphScrollHeight}px` : `${paragraphCollapseHeight}px`}
