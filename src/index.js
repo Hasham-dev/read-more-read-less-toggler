@@ -58,7 +58,7 @@ export const ReadMoreToggler = ({
     isParagraphExceed && (
       <ReadMoreWrapper onClick={toggleHandler} buttonColor={buttonColor}>
         <Caret collapse={isOverflow} />
-        {readMore ? 'READ LESS' : 'READ MORE'}
+        {readMore ? 'View Less' : 'View More'}
       </ReadMoreWrapper>
     )
 
